@@ -1,0 +1,105 @@
+.next-steps .fa-link {
+  margin-right: 5px;
+}
+
+/* Fix for use only flexbox in content area */
+.next-steps .row {
+  margin-bottom: 0;
+}
+
+.next-steps .col-md-5 {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .next-steps .col-md-5 {
+    margin-bottom: 0;
+  }
+}
+
+.spinner {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bookings {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    /*width: 15em;*/
+    display: flex;
+    flex-wrap: wrap;
+  }
+.bookings li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em;
+  height: 8.5em;
+  width: 12em;
+  border-radius: 4px;
+}
+
+.bookings li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+
+.bookings button.delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #eee;
+  margin: 3px;
+  font-size: larger;
+  padding: 0 3px 3px 3px;
+  line-height: 0.8em;
+}
+.bookings .roomA {
+  background-color: #33B679;
+}
+
+.bookings .roomB {
+  background-color: #E67C72;
+}
+
+.bookings .roomC {
+  background-color: #F6BF26;
+}
+
+form.booking {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+form.booking .error {
+  color: red;
+  background-color: #eee;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+}
+
+form.booking label {
+  margin-right: .5rem;
+}
+
+form.booking > * {
+  margin-bottom: .5rem;
+}
+
+select#select-room {
+  width: 190px;
+}

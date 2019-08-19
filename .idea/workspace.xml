@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a8a09e9-dddb-4db0-a292-9b11aae5c3ad" name="Default" comment="" />
+    <list default="true" id="9a8a09e9-dddb-4db0-a292-9b11aae5c3ad" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/auth_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/auth_config.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -53,8 +55,8 @@
       <file leaf-file-name="auth_config.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/auth_config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -148,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/auth_config.json" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/ExternalApi.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
@@ -174,6 +175,7 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/NavBar.js" />
+        <option value="$PROJECT_DIR$/src/auth_config.json" />
       </list>
     </option>
   </component>
@@ -378,12 +380,12 @@
       <workItem from="1566218215782" duration="1259000" />
       <workItem from="1566221043557" duration="1754000" />
       <workItem from="1566222865303" duration="1942000" />
-      <workItem from="1566225438865" duration="940000" />
+      <workItem from="1566225438865" duration="1180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75459000" />
+    <option name="totallyTimeSpent" value="75699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -691,8 +693,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/auth_config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>

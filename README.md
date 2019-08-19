@@ -34,7 +34,7 @@ To do this, first copy `src/auth_config.json.example` into a new file in the sam
 ### Compiles and hot-reloads for development
 
 ```bash
-npm run start
+npm start
 ```
 
 ## Deployment

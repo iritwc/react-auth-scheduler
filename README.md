@@ -25,6 +25,8 @@ yarn install
 npm start
 ```
 
+Will run server and client concurrently.
+
 ## Deployment
 
 ### Compiles and minifies for production

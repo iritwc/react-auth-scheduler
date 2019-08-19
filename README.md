@@ -47,8 +47,8 @@ npm run test
 
 ## Issues known
 
-1. 
-2. 
+1. Permissions are not handled. That is, any user reschedule any of the existing bookings.
+2. There may be an issue with the TZ of an exisitng booking. That is, editting my pop up an overlapping error message.
 
 ## Author
 

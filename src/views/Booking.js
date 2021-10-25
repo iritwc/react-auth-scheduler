@@ -35,7 +35,7 @@ const Booking = (props) => {
     };
 
     callDetailsApi();
-  }, [getTokenSilently, showResult]);
+  }, [getTokenSilently, props.match.params.id]);
 
   const callUpdateApi = async (b) => {
     try {

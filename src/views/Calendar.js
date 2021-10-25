@@ -23,25 +23,6 @@ const Calendar = () => {
     return moment(d).format("MMM DD YYYY");
   };
 
-  const callApi = async () => {
-    try {
-      const token = await getTokenSilently();
-
-      const response = await fetch("/api", {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      });
-
-      const { success , data} = await response.json();
-      setShowResult(success);
-      let booking = groupByApply('start_date', applyDateKey)(data);
-      setBookings(booking);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   const callDeleteApi = async (id) => {
     try {
 
@@ -64,9 +45,27 @@ const Calendar = () => {
 
   useEffect(() => {
 
+    const callApi = async () => {
+      try {
+        const token = await getTokenSilently();
+
+        const response = await fetch("/api", {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+
+        const { success , data} = await response.json();
+        setShowResult(success);
+        let booking = groupByApply('start_date', applyDateKey)(data);
+        setBookings(booking);
+      } catch (error) {
+        console.error(error);
+      }
+    };
     callApi();
 
-  }, [action]);
+  }, [getTokenSilently, action]);
 
   return (
     <>

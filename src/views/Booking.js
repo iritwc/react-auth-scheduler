@@ -11,34 +11,37 @@ const Booking = (props) => {
   const { getTokenSilently } = useAuth0();
 
   useEffect(() => {
+
+    const callDetailsApi = async () => {
+      try {
+
+        const token = await getTokenSilently();
+        console.log('call callDetailsApi', token);
+
+        const response = await fetch("/api/" + props.match.params.id, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          }
+        });
+
+        const responseData = await response.json();
+        console.log('callDetailsApi, response', responseData);
+        setBooking(responseData.data);
+        setShowResult(responseData.success);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
     callDetailsApi();
-
-  }, []);
-
-  const callDetailsApi = async () => {
-    try {
-      const token = await getTokenSilently();
-
-      const response = await fetch("/api/" + props.match.params.id, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        }
-      });
-
-      const responseData = await response.json();
-      console.log(responseData);
-      setBooking(responseData.data);
-      setShowResult(responseData.success);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  }, [getTokenSilently, showResult]);
 
   const callUpdateApi = async (b) => {
     try {
       setShowSubmitResult({});
       const token = await getTokenSilently();
+      console.log('call callUpdateApi', token);
       const body = {...b};
       const response = await fetch("/api/" + props.match.params.id + "/update", {
         method: 'POST',

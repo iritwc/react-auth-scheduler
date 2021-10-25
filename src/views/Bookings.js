@@ -10,24 +10,6 @@ const Bookings = () => {
   const [bookings, setBookings] = useState(null);
   const { getTokenSilently } = useAuth0();
 
-  const callApi = async () => {
-    try {
-      const token = await getTokenSilently();
-
-      const response = await fetch("/api", {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      });
-
-      const { success , data} = await response.json();
-      setShowResult(success);
-      setBookings(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   const callDeleteApi = async (id) => {
     try {
 
@@ -50,9 +32,26 @@ const Bookings = () => {
 
   useEffect(() => {
 
+    const callApi = async () => {
+      try {
+        const token = await getTokenSilently();
+
+        const response = await fetch("/api", {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        });
+
+        const { success , data} = await response.json();
+        setShowResult(success);
+        setBookings(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
     callApi();
 
-   }, [action]);
+   }, [getTokenSilently, action]);
 
   return (
     <>
